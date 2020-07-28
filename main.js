@@ -32,3 +32,8 @@ var arrayB = [10, 20, 30, 40, 50];
 var arrayAandB = arrayA.concat(arrayB);
 console.log('59str');
 console.log(arrayAandB);
+
+// 60-61 str ARRAY.CONCAT объеденение массивов/  array.indexOf()
+var colors = ['red', 'blue', 'yellow'];
+colors.indexOf('red'); //0
+colors.indexOf('blue'); //1
