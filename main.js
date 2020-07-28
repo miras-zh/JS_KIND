@@ -37,3 +37,59 @@ console.log(arrayAandB);
 var colors = ['red', 'blue', 'yellow'];
 colors.indexOf('red'); //0
 colors.indexOf('blue'); //1
+
+// array.join(parametr)  // razdelitel v skobkah
+var boringAnimals = ['Martyshka', 'Cat', 'Fish', 'Yasherica'];
+boringAnimals.join(' * ');
+//65 str    Math.random()   <1 / Math.random()*10   <10
+// okruglenie Math.floor(3.6)  = 3
+var randomWords = ['Bam', 'STILL', 'Game', 'Tor'];
+var randomIndex = Math.floor(Math.random() * 4);
+randomWords[randomIndex]; // Bam
+randomIndex = Math.floor(Math.random() * 4)
+0
+randomIndex = Math.floor(Math.random() * 4)
+3
+randomWords[randomIndex]
+"Tor"
+// 67 str
+var phrases = [
+    "Звучит неплохо",
+    "Да, это определенно надо сделать",
+    "Не думаю, что это хорошая идея",
+    "Может, не сегодня?",
+    "Компьютер говорит нет"
+];
+// Мне выпить еще молочного коктейля? 
+//phrases[Math.floor(Math.random() * 5)];
+
+// 69 str zadanie
+
+var nachSets = ['Твоя', 'Моя', 'Ее', 'Его'];
+var sredSets = ['Огромная', 'Маленькая', 'Непонятная'];
+var endSets = ['Голова', 'Шея', 'Спина', 'Рука', 'Нога'];
+var endPrigSets = ['Грязная', 'Вонючая', 'Страшная', 'Ужасная', 'Пугающая'];
+
+var nachSet = nachSets[Math.floor(Math.random() * nachSets.length)];
+var sredSet = sredSets[Math.floor(Math.random() * sredSets.length)];
+var endSet = endSets[Math.floor(Math.random() * endSets.length)];
+var endPrigSet = endPrigSets[Math.floor(Math.random() * endPrigSets.length)];
+
+var randomInsult;
+
+randomInsult = [nachSet, sredSet, endSet, endPrigSet];
+//70
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
