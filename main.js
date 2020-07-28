@@ -79,7 +79,20 @@ var randomInsult;
 
 randomInsult = [nachSet, sredSet, endSet, endPrigSet];
 //70
-
+//73 узнать количество эелементов содержащий объект
+// Object.keys(cars);
+// Object.keys(Numbers);
+var cars = {
+    name: 'BMW',
+    Year: 2020,
+    Price: 15000
+};
+var Numbers = {
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4
+}
 
 
 
