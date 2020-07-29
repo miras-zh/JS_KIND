@@ -133,3 +133,11 @@ var movies = {
         format: 'Blu-ray'
     }
 };
+var findNemo = movies["Find Nemo"];
+var cars = {
+    releaseDate: 2003,
+    duration: 100,
+    actors: ['Oun Wilson'],
+    format: 'DVD'
+};
+//83str
