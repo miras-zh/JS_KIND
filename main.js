@@ -99,8 +99,8 @@ var dinosaurs = [
     { name: "Тираннозавр рекс", period: "Верхнемеловой" },
     { name: "Стегозавр", period: "Верхнеюрский" },
     { name: "Платеозавр", period: "Триасовый" }
-    ];
-  /*  Получить сведения о первом динозавре можно уже известным нам
+];
+/*  Получить сведения о первом динозавре можно уже известным нам
     способом — указав индекс в квадратных скобках:
     dinosaurs[0];
     { name: "Тираннозавр рекс", period: "Верхнемеловой" }
@@ -108,12 +108,28 @@ var dinosaurs = [
 var anna = { name: "Анна", age: 11, luckyNumbers: [2, 4, 8, 16] };
 var dave = { name: "Дэйв", age: 5, luckyNumbers: [3, 9, 40] };
 var kate = { name: "Кейт", age: 9, luckyNumbers: [1, 2, 3] };
-var friends = [anna,dave,kate];
+var friends = [anna, dave, kate];
 
 
+// 80 str 
 
-
-
-
-
-;
+var movies = {
+    "Find Nemo": {
+        releaseDate: 2003,
+        duration: 100,
+        actors: ['Alvert Bruks', 'Ellen Dedjeners', 'Aleksandr Gold'],
+        format: 'mp4'
+    },
+    "stars war": {
+        releaseDate: 1983,
+        duration: 134,
+        actors: ['Mark Hamil', 'Harison Ford', 'Karry Fisher'],
+        format: 'DVD'
+    },
+    "Garri Potter": {
+        releaseDate: 2005,
+        duration: 157,
+        actors: ['Daniel Redklif', 'Emma Watson', 'Rupert Green'],
+        format: 'Blu-ray'
+    }
+};
