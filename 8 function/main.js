@@ -65,3 +65,20 @@ function MyCompliment() {
 }
 
 buttonRandomTwo.addEventListener("click", MyCompliment);
+
+let arrayAAA = [1, 2, 3];
+let arrayBBB = [1, 5, 4];
+let resuls = [];
+function sravn(a, b) {
+  if (a.length == b.length) {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] == b[i]) {
+        resuls[i] = `ravny ${a[i]} and ${b[i]}`;
+      } else {
+        resuls[i] = `NEravny ${a[i]} and ${b[i]}`;
+      }
+    }
+  }
+
+  console.log(resuls);
+}
