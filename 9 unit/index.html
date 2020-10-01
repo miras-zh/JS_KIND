@@ -7,17 +7,62 @@
   </head>
   <body>
     <h1 id="h1text">Heelllooo!</h1>
+    <h2 id="h1text">Heelllooofffffffffffffffff!</h2>
     <br />
     <button id="h1button">edit text</button>
+    <button id="h2button">edit text</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script>
       let h1Element = document.querySelector("#h1text");
       let buttonElement = document.querySelector("#h1button");
+      let button2Element = document.querySelector("#h2button");
 
       let editText = () => {
         let newText = prompt("Enter new Text");
         h1Element.innerHTML = newText;
       };
+
+      let editText2 = () => {
+        let newText = prompt("Enter new Text");
+        $("#h1text").text(newText);
+      };
       buttonElement.addEventListener("click", editText);
+      button2Element.addEventListener("click", editText2);
+
+      $("body").append("<h2>this text apend gquery</h2>");
+
+      /*for (let i = 0; i < 3; i++) {
+                                 let hobby = prompt("Enter your hobby this ");
+                                 $("body").append("<p>" + hobby + "</p>");
+                         */
+      /*$("h1").fadeOut(4000);
+          $("h1").fadeIn(8000);
+          $("h2").slideUp(1000).slideDown(2000);
+          $("h2").slideUp(1000).slideDown(2000);
+          $("h2").slideUp(1000).slideDown(2000);*/
+      /*-----------------------------*/
+      let myFrend = ["Bekham", "Oven", "Rivaldo", "DiCaprio", "Jet"];
+      for (let j = 0; j < myFrend.length; j++) {
+        $("body").append("<p>" + myFrend[j] + "</p>");
+      }
+      $("p").slideUp(2000).slideDown(2000);
+      $("h1").text("mytFrend");
+      $("p").append(" best");
+
+      for (let g = 0; g < $("p").length; g++) {
+        $("p")[g].innerText += " and better";
+      }
+
+      $("body").append("<h3>ZAGOLOVOK</h3>");
+      for (let f = 0; f < 10; f++) {
+        $("h3").fadeOut(500).delay(1000).fadeIn(500);
+      }
     </script>
   </body>
 </html>
