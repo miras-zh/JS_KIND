@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h1text">Heelllooo!</h1>
+    <br />
+    <button id="h1button">edit text</button>
+    <script>
+      let h1Element = document.querySelector("#h1text");
+      let buttonElement = document.querySelector("#h1button");
+
+      let editText = () => {
+        let newText = prompt("Enter new Text");
+        h1Element.innerHTML = newText;
+      };
+      buttonElement.addEventListener("click", editText);
+    </script>
+  </body>
+</html>
