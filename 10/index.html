@@ -22,13 +22,15 @@
       };
 
       setInterval(moveHeading, 1);
-
-      $("html").mousemove(function (event) {
+      let mouseText = (event) => {
         $("#textAnim2").offset({
           left: event.pageX,
           top: event.pageY,
         });
-      });
+      };
+      let inter = setInterval(mouseText, 500);
+
+      delay($("html").mousemove(mouseText), 500);
     </script>
   </body>
 </html>
