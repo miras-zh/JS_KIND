@@ -8,29 +8,62 @@
   <body>
     <h1 id="textAnim">JS Animation</h1>
     <h1 id="textAnim2">JS Animation</h1>
-    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-    <script>
-      let h1Element = document.querySelector("#textAnim");
-      let leftOffset = 0;
 
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+      // 2 zadanie--------------------------------------------------------------------
+      let h1Element = document.querySelector("#textAnim");
+      let leftOffset = 0; //right
+      let topOffset = 0; //bottom
+      let bottomAccess;
+      let topAccess = true;
+      let Access = true;
+      let num = 1;
       let moveHeading = () => {
-        h1Element.style.paddingLeft = leftOffset + "px";
-        leftOffset += 1;
-        if (leftOffset > 500) {
-          leftOffset = 0;
+        if (Access) {
+          // right
+          if (leftOffset < 500 && topOffset <= 0) {
+            h1Element.style.paddingLeft = leftOffset + "px";
+            leftOffset += num;
+          }
+          if (leftOffset >= 500 && topOffset <= 500) {
+            h1Element.style.paddingTop = topOffset + "px";
+            topOffset += num;
+          }
+          if (leftOffset <= 500 && topOffset >= 500) {
+            h1Element.style.paddingLeft = leftOffset + "px";
+            leftOffset -= num;
+          }
+          if (leftOffset <= 0 && topOffset <= 500) {
+            h1Element.style.paddingTop = topOffset + "px";
+            topOffset -= num;
+          }
         }
       };
 
-      setInterval(moveHeading, 1);
+      setInterval(moveHeading, 0.5);
+
+      //-------------------------------------------------------------------------------
+      //1 zadanie-------------------------- page 165
       let mouseText = (event) => {
         $("#textAnim2").offset({
           left: event.pageX,
           top: event.pageY,
         });
+        if (Access == true) {
+          Access = false;
+        } else {
+          Access = true;
+        }
       };
       let inter = setInterval(mouseText, 500);
-
-      delay($("html").mousemove(mouseText), 500);
+      let numm = () => {
+        return (num += 1);
+      };
+      // $("html").click(mouseText);
+      $("html").click(numm);
+      //----------------------------------------------
     </script>
   </body>
 </html>
