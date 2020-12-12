@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="200" height="200"> </canvas><br />
+    <canvas id="canvas2" width="1200" height="1200"> </canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+      var canvas2 = document.getElementById("canvas2");
+      var ctx2 = canvas2.getContext("2d");
+
+      ctx2.fillStyle = "black";
+      ctx2.lineWidth = "5";
+      ctx2.beginPath();
+      ctx2.moveTo(100, 100);
+      ctx2.lineTo(100, 60);
+      ctx2.lineTo(130, 0);
+      ctx2.lineTo(160, 60);
+      ctx2.lineTo(160, 100);
+      ctx2.lineTo(160, 120);
+      ctx2.lineTo(100, 120);
+      ctx2.fill();
+
+      ctx2.lineWidth = "2";
+      ctx2.strokeStyle = "Green";
+      ctx2.beginPath();
+      ctx2.arc(250, 50, 40, 0, Math.PI / 2, false);
+      ctx2.stroke();
+      ctx2.beginPath();
+      ctx2.arc(400, 50, 40, Math.PI / 2, Math.PI * (3 / 2), false);
+      ctx2.stroke();
+      ctx2.beginPath();
+      ctx2.arc(600, 50, 40, 0, Math.PI * 2, false);
+      ctx2.stroke();
+      function circle(x, y, r) {
+        ctx2.lineWidth = "2";
+        ctx2.strokeStyle = "Blue";
+        ctx2.beginPath();
+        ctx2.arc(x, y, r, 0, Math.PI * 2, false);
+        ctx2.stroke();
+        ctx2.beginPath();
+        ctx2.arc(x, r + r + y, r, 0, Math.PI * 2, false);
+        ctx2.stroke();
+        ctx2.beginPath();
+        ctx2.arc(x - r / 2, y - r / 2, 2, 0, Math.PI * 2, false);
+        ctx2.fill();
+        ctx2.beginPath();
+        ctx2.arc(x + r / 2, y - r / 2, 2, 0, Math.PI * 2, false);
+        ctx2.fill();
+        ctx2.beginPath();
+        ctx2.strokeStyle = "Orange";
+        ctx2.arc(x, y, 4, 0, Math.PI * 2, false);
+        ctx2.fill();
+      }
+    </script>
+  </body>
+</html>

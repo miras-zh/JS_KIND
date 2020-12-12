@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гонки</title>
+  </head>
+  <body>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+      var Car = function (x,y) {
+        this.x = x;
+        this.y = y;
+    }      
+
+    Car.prototype.draw = function(){
+        var carHtml = '<img src="./car.png">';
+        this.carElement = $(carHtml);
+
+        this.carElement.css({
+          position:"absolute",
+          left:this.x,
+          top:this.y  
+        });
+
+        $("body").append(this.carElement);
+
+      }
+
+    var tesla = new Car(50,60);
+    var camry = new Car(30,400);
+
+     tesla.draw();
+camry.draw(); 
+    </script>
+  </body>
+</html>

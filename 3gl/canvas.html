@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="200" height="200"> </canvas><br />
+    <canvas id="canvas2" width="1200" height="1200"> </canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      for (var i = 0; i < 10; i++) {
+        ctx.fillRect(i * 10, i * 10, 10, 10);
+      }
+
+      var canvas2 = document.getElementById("canvas2");
+      var ctx2 = canvas2.getContext("2d");
+      ctx2.fillRect(300, 0, 50, 50);
+      ctx2.fillRect(320, 50, 10, 20);
+      ctx2.fillRect(300, 70, 50, 80);
+      ctx2.fillRect(250, 70, 80, 10);
+      ctx2.fillRect(310, 70, 80, 10);
+      ctx2.fillRect(300, 150, 10, 50);
+      ctx2.fillRect(340, 150, 10, 50);
+
+      ctx2.fillRect(0, 0, 20, 60);
+      ctx2.fillStyle = "red";
+      ctx2.fillRect(20, 0, 20, 60);
+      ctx2.fillStyle = "blue";
+      ctx2.fillRect(40, 0, 20, 60);
+      ctx2.fillStyle = "green";
+      ctx2.fillRect(60, 0, 20, 60);
+      ctx2.fillStyle = "skyblue";
+      ctx2.fillRect(80, 0, 20, 60);
+
+      ctx2.fillStyle = "black";
+      ctx2.lineWidth = 4;
+      ctx2.strokeRect(50, 80, 200, 100);
+      ctx2.strokeRect(390, 80, 200, 100);
+
+      ctx2.beginPath();
+      ctx2.moveTo(10, 200);
+      ctx2.lineTo(100, 300);
+      ctx2.moveTo(100, 200);
+      ctx2.lineTo(10, 300);
+      ctx2.stroke();
+    </script>
+  </body>
+</html>
