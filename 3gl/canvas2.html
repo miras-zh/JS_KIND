@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <H1>14 glava</H1>
+    <canvas id="canvas2" width="1200" height="1200"> </canvas>
+    <script>
+      var canvas2 = document.getElementById("canvas2");
+      var ctx2 = canvas2.getContext("2d");
+      var canvas = document.getElementById("canvas");
+      var position = 0;
+      var positionY = 400
+    setInterval(function () {
+    ctx2.fillStyle = "black";
+    ctx2.clearRect(0, 0, 600, 600);
+    
+    ctx2.fillRect(position, position, 20, 20);
+    ctx2.fillRect(0, position, 20, 20);
+    ctx2.fillRect(position,0, 20, 20);
+    
+    ctx2.fillStyle = "green";
+    ctx2.fillRect(positionY,400, 20, 20);
+    ctx2.fillRect(400,positionY, 20, 20);
+    ctx2.fillRect(positionY,positionY, 20, 20);
+    
+    ctx2.fillStyle = "blue";
+    ctx2.fillRect(positionY,position, 20, 20);
+    ctx2.fillRect(positionY,0, 20, 20);
+    ctx2.fillRect(400,position, 20, 20);
+    ctx2.fillStyle = "orange";    
+        
+    ctx2.fillRect(position,positionY, 20, 20);
+    ctx2.fillRect(0,positionY, 20, 20);
+    ctx2.fillRect(position,400, 20, 20);
+
+    ctx2.fillStyle = "black";
+    position++;
+    positionY--;
+    if (position > 400) {
+    position = 0;
+    positionY = 400;
+      }
+    }, 20);
+    </script>
+  </body>
+</html>

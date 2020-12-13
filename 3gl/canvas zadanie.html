@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1 id="h1">Canvas</h1>
+
+    <canvas id="canvas" width="1200" height="1200"> </canvas><br />
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var points = [[50, 50], [50, 100], [100, 100], [100, 50], [50, 50]];
+      var mysteryPoints = [[50, 50], [50, 100], [25, 120], [100, 50],
+        [70, 90], [100, 90], [70, 120]];
+      let count = 0;
+
+      function drawLine(array){
+        ctx.beginPath()
+        for (let i = 0; i < array.length; i++) {
+          const element = array[i];
+          if(i == 0){
+            ctx.moveTo(element[0],element[1])
+          }else{
+            addline(element[0],element[1]);
+          }
+        }
+        ctx.stroke()
+      }
+
+      function addline(x,y){
+        return ctx.lineTo(x,y);
+      }
+      
+      $("#canvas").click((event)=>{
+        if(count = 0){
+          ctx.beginPath();
+          addline(event.pageX,event.pageY);
+        }else{
+          addline(event.pageX,event.pageY);
+        }
+        ++count;
+      })
+      $("#h1").click((event)=>{console.log(event)})
+    </script>
+  </body>
+</html>
