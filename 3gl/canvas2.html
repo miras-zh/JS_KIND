@@ -13,7 +13,10 @@
       var ctx2 = canvas2.getContext("2d");
       var canvas = document.getElementById("canvas");
       var position = 0;
-      var positionY = 400
+      var positionY = 400;
+      var spos = 0;
+      var ys = 300;
+      var xs = 900;
     setInterval(function () {
     ctx2.fillStyle = "black";
     ctx2.clearRect(0, 0, 600, 600);
@@ -45,6 +48,20 @@
     positionY = 400;
       }
     }, 20);
+    setInterval(function(){
+      ctx2.clearRect(600, 0, 600, 600);
+      ctx2.fillStyle = "green";
+      ctx2.fillRect(xs-(spos/2),ys-(spos/2),spos,spos);
+      ctx2.fillStyle = "white";
+      ctx2.fillRect(xs-(spos/3),ys-(spos/3),(spos/1.5),(spos/1.5));
+      ctx2.fillStyle = "orange";
+      ctx2.fillRect(xs-(spos/4),ys-(spos/4),(spos/2),(spos/2))
+      ctx2.fillStyle = "blue";
+      ctx2.fillRect(xs-(spos/6),ys-(spos/6),(spos/3),(spos/3))
+      spos++;
+      if(spos > 300){spos = 0;}
+    },30)
+    
     </script>
   </body>
 </html>

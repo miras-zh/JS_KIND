@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <H1>212str</H1>
+  <canvas id="canvas2" width="1200" height="1200"> </canvas>
+  <script>
+    var canvas2 = document.getElementById("canvas2");
+    var ctx2 = canvas2.getContext("2d");
+    var circle = function (x, y, radius, fillCircle) {
+      ctx2.beginPath()
+      ctx2.arc(x, y, radius, 0, Math.PI * 2, false)
+      if (fillCircle) { ctx2.fill() } else { ctx.stroke() }
+    }
+    var drawBee = function (x, y) {
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "Black";
+      ctx.fillStyle = "Gold";
+      circle(x, y, 8, true);
+      circle(x, y, 8, false);
+      circle(x - 5, y - 11, 5, false);
+      circle(x + 5, y - 11, 5, false);
+      circle(x - 2, y - 1, 2, false);
+      circle(x + 2, y - 1, 2, false);
+    };
+    circle(x, y, 8, true);
+
+  </script>
+</body>
+
+</html>
